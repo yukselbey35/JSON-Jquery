@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Selectors</title>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    
+
+    <script>
+        /*$(document).ready(function)  == $(function)
+        The ready() method can only be used on the current document, so no selector is required:   
+        How to use = $(selector).action()
+        */
+        $(document).ready(function(){
+            $("p").click(function(){ //Select by tag name
+                $(this).hide(); //where and Action
+            });
+
+            $("#head1").click(function(){  //Select by id
+                $(this).hide();
+            });
+
+            $(".div1").click(function(){ //Select by class
+                $(this).hide();
+            });
+
+            $("button").click(function(){ //Select by attribute
+                $(".div1").hide(); //Where and action
+            });
+
+            $("#hideall").click(function(){ //Select all
+                $("*").hide();
+            });
+
+            $("img").click(function(){ //Select this
+                $(this).hide();
+            });
+
+            $("#hidePTag").click(function(){
+                $("p:first").hide();
+            });
+
+            $("#hidefirstli").click(function(){
+                $("ul li:first-child").hide();
+            });
+
+            $("#hideAllhref").click(function(){
+                $('[href]').hide();
+            });
+
+            $("#changeColor").click(function(){
+                $("tr:odd").css({ background: "#ccc", color: "red" });
+            })
+
+
+        });
+    </script>
+</head>
+<body>
+    
+    <h2 id="head1">Jquery Lesson</h2>
+
+    <p>This is first paragraph.</p>
+    <p>This is second paragraph.</p>
+    <p>This is third paragraph.</p>
+    <div class="div1">
+        <img src="https://cdn.pixabay.com/photo/2020/06/10/09/31/mockup-5281991__340.jpg" width="200px">
+    </div>
+    <button type="button">Hide Image</button>
+    <br>
+    <button id="hideall" type="button">Hide ALL</button>
+    <div id="hideimgs">
+        <img src="https://cdn.pixabay.com/photo/2018/04/03/23/29/wordpress-3288420__340.png" width="200px">
+        <img src="https://cdn.pixabay.com/photo/2014/09/14/01/13/jquery-444684__340.png" width="200px">
+        <img src="https://cdn.pixabay.com/photo/2018/04/03/23/29/wordpress-3288414__340.png" width="200px">
+    </div>
+    <button id="hidePTag" type="button">Hide First Paragraph</button>
+    <h3>List 1</h3>
+    <ul>
+        <li><a href="#">Main Page</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Forum</a></li>
+    </ul>
+    <h3>List 2</h3>
+    <ul>
+        <li>JavaScript</li>
+        <li>HTML5</li>
+        <li>jQuery</li>
+        <li>Java™</li>
+        <li>Python</li>
+        <li>SQL</li>
+    </ul>
+    <button id="hidefirstli" type="button">Hide First List item</button>
+
+    <button id="hideAllhref" type="button">Hide All link items</button>
+
+    <h1>List of national parks of the United States</h1>
+    <table border="5">
+      <tr>
+        <th>Park Name </th>
+        <th>Location</th>
+        <th>Date Established as a Park</th>
+        <th>Description</th>
+        <th>Picture</th>
+      </tr>
+      <tr>
+          <td><a href="https://en.wikipedia.org/wiki/Yellowstone_National_Park" target="_blank">Yellowstone</a></td>
+          <td>Wyoming, Montana, Idaho</td>
+          <td>March 1, 1872</td>
+          <td>Situated on the Yellowstone Caldera, the park has an expansive network of geothermal areas including boiling mud pots, vividly colored hot springs</td>
+          <td><a href="https://en.wikipedia.org/wiki/Yellowstone_National_Park"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg/400px-Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg" height="70" width="90" alt="Yosemite" border="2"></a></td>    
+
+      </tr>
+      <tr>
+        <td><a href="https://en.wikipedia.org/wiki/Yellowstone_National_Park" target="_blank">Yellowstone</a></td>
+        <td>Wyoming, Montana, Idaho</td>
+        <td>March 1, 1872</td>
+        <td>Situated on the Yellowstone Caldera, the park has an expansive network of geothermal areas including boiling mud pots, vividly colored hot springs</td>
+        <td><a href="https://en.wikipedia.org/wiki/Yellowstone_National_Park"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg/400px-Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg" height="70" width="90" alt="Yosemite" border="2"></a></td>    
+
+    </tr>
+    <tr>
+        <td><a href="https://en.wikipedia.org/wiki/Yellowstone_National_Park" target="_blank">Yellowstone</a></td>
+        <td>Wyoming, Montana, Idaho</td>
+        <td>March 1, 1872</td>
+        <td>Situated on the Yellowstone Caldera, the park has an expansive network of geothermal areas including boiling mud pots, vividly colored hot springs</td>
+        <td><a href="https://en.wikipedia.org/wiki/Yellowstone_National_Park"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg/400px-Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg" height="70" width="90" alt="Yosemite" border="2"></a></td>    
+
+    </tr>
+	</table>
+    <button id="changeColor" type="button">Change Color on the table</button>
+    
+
+    
+</body>
+</html>
