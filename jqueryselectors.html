@@ -5,61 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery Selectors</title>
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.js"
-    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-    crossorigin="anonymous"></script>
+    
+    <style>
+        ul {
+          margin-left: 20px;
+          color: blue;
+        }
+        li {
+          cursor: default;
+        }
+        span {
+          color: red;
+        }
+    </style>
+    
     
 
-    <script>
-        /*$(document).ready(function)  == $(function)
-        The ready() method can only be used on the current document, so no selector is required:   
-        How to use = $(selector).action()
-        */
-        $(document).ready(function(){
-            $("p").click(function(){ //Select by tag name
-                $(this).hide(); //where and Action
-            });
-
-            $("#head1").click(function(){  //Select by id
-                $(this).hide();
-            });
-
-            $(".div1").click(function(){ //Select by class
-                $(this).hide();
-            });
-
-            $("button").click(function(){ //Select by attribute
-                $(".div1").hide(); //Where and action
-            });
-
-            $("#hideall").click(function(){ //Select all
-                $("*").hide();
-            });
-
-            $("img").click(function(){ //Select this
-                $(this).hide();
-            });
-
-            $("#hidePTag").click(function(){
-                $("p:first").hide();
-            });
-
-            $("#hidefirstli").click(function(){
-                $("ul li:first-child").hide();
-            });
-
-            $("#hideAllhref").click(function(){
-                $('[href]').hide();
-            });
-
-            $("#changeColor").click(function(){
-                $("tr:odd").css({ background: "#ccc", color: "red" });
-            })
-
-
-        });
-    </script>
+    
 </head>
 <body>
     
@@ -135,7 +97,47 @@
     </tr>
 	</table>
     <button id="changeColor" type="button">Change Color on the table</button>
-    
+
+    <p id="outer">
+        The mouseover event is sent to an element when the mouse pointer enters the element. Any HTML element can receive this event.
+    </p>
+
+    <div id="outer">
+        The mouseover <span class="changeRed">event</span> <span class="changeBlue">is sent to an element </span> when the mouse pointer enters the element. Any HTML element can receive this event.
+        <br>
+        <p>
+            <span class="changeRed">What are Events?</span>
+            All the different visitors' actions that a web page can respond to are called events.
+
+            An event represents the precise moment when something happens.
+
+            Examples:
+
+            moving a mouse over an element
+            selecting a <span class="changeBlue">radio button</span>radio button
+            clicking on an element
+            The term "fires/fired" is often used with events. Example: "The keypress event is fired, the moment you press a key".
+        </p>
+        The mouseover <span class="changeRed">event</span> <span class="changeBlue">is sent to an element </span> when the mouse pointer enters the element. Any HTML element can receive this event.
+    </div>
+
+    <ul>
+        <li>Milk</li>
+        <li>Bread</li>
+        <li class="fade">Chips</li>
+        <li class="fade">Socks</li>
+      </ul>
+
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+
+    <script src="scripts.js"></script>
 
     
 </body>
